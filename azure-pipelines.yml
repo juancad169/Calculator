@@ -14,10 +14,8 @@ variables:
 steps:
 - task: Docker@2
   inputs:
-    containerRegistry: 'YourDockerRegistryServiceConnection'
-    repository: 'your-docker-repo-name'
     command: 'build'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '**/src/Dockerfile'
     tags: |
       latest
       $(Build.BuildId)
